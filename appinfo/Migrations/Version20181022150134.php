@@ -46,8 +46,7 @@ class Version20181022150134 implements ISqlMigration {
 		
 		if ($platform instanceof MySqlPlatform) {
 			$sqls = [
-				"ALTER TABLE $tableName MODIFY COLUMN `subjectparams` LONGTEXT NOT NULL",
-				"ALTER TABLE $tableName MODIFY COLUMN `messageparams` LONGTEXT NULL",
+				"ALTER TABLE $tableName MODIFY COLUMN `subjectparams` LONGTEXT NOT NULL, MODIFY COLUMN `messageparams` LONGTEXT NULL",
 			];
 		} else {
 			$sqls = [];
